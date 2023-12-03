@@ -31,9 +31,7 @@ public class LoginApi extends BaseApi {
     @Step("Get The Access Token")
     public String getAccessToken(Response response) {
         JsonPath jsonPath = response.jsonPath();
-        String token = jsonPath.getString("token");
-        System.out.println("The Access Token is " + token);
-        return token;
+        return jsonPath.getString("token");
     }
 
     @Step("Make Sure The Token Not Empty")
